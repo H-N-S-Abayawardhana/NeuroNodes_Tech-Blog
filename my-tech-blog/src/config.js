@@ -8,8 +8,8 @@ const config = {
   // Social Media
   social: {
     twitter: "yourtwitterhandle",
-    github: "yourgithubhandle",
-    linkedin: "yourlinkedinname",
+    github: "https://github.com/H-N-S-Abayawardhana",
+    linkedin: "https://www.linkedin.com/in/niwarthana-abayawardhana-0752a5268/",
   },
   
   // Navigation
