@@ -1,25 +1,52 @@
+// src/config.js
+/**
+ * Global configuration for the blog
+ */
+
 const config = {
-  // Blog Information
-  title: "My Tech Blog",
-  description: "A blog about web development, programming, and tech insights",
-  author: "Niwarthana Abayawardhana",
-  siteUrl: "https://yourdomain.com",
-  
-  // Social Media
-  social: {
-    twitter: "yourtwitterhandle",
-    github: "https://github.com/H-N-S-Abayawardhana",
-    linkedin: "https://www.linkedin.com/in/niwarthana-abayawardhana-0752a5268/",
+  // Blog information
+  blog: {
+    title: 'NeuroNodes Tech Blog',
+    description: 'A modern React tech blog focusing on web development, AI, and programming tips.',
+    author: 'Your Name',
+    logo: '/assets/logo.svg', // Path to your logo
+    baseUrl: 'https://your-domain.com', // Used for canonical URLs and SEO
   },
   
-  // Navigation
+  // Social media links
+  social: {
+    twitter: 'https://twitter.com/yourusername',
+    github: 'https://github.com/yourusername',
+    linkedin: 'https://linkedin.com/in/yourusername',
+  },
+  
+  // Navigation links
   navigation: [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    // Add more navigation items as needed
   ],
   
-  // Date Formats
-  dateFormat: 'MMMM dd, yyyy',
-}
+  // Default SEO settings
+  seo: {
+    defaultTitle: 'NeuroNodes Tech Blog',
+    titleTemplate: '%s | NeuroNodes Tech Blog',
+    defaultDescription: 'A modern React tech blog focusing on web development, AI, and programming tips.',
+    defaultKeywords: 'react, javascript, web development, programming, tech blog',
+    twitterUsername: '@yourusername',
+  },
+  
+  // Post display settings
+  posts: {
+    postsPerPage: 6, // Number of posts to show per page
+    excerptLength: 160, // Character length for post excerpts
+    dateFormat: 'MMMM dd, yyyy', // Format for displaying dates
+  },
+  
+  // Footer content
+  footer: {
+    copyright: `© ${new Date().getFullYear()} NeuroNodes Tech Blog. All rights reserved.`,
+  },
+};
 
-export default config
+export default config;
