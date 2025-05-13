@@ -1,6 +1,6 @@
 // src/routes/AppRoutes.jsx
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '../context/AuthContext';
 import PrivateRoute from '../components/PrivateRoute';
 
@@ -24,34 +24,32 @@ const LoadingFallback = () => (
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            {/* Public routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/post/:slug" element={<PostDetail />} />
-            <Route path="/about" element={<About />} />
-            
-            {/* Auth routes */}
-            <Route path="/login" element={<Login />} />
-            
-            {/* Protected admin routes */}
-            <Route 
-              path="/admin" 
-              element={
-                <PrivateRoute>
-                  <Admin />
-                </PrivateRoute>
-              } 
-            />
-            
-            {/* 404 route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </AuthProvider>
-    </BrowserRouter>
+    <AuthProvider>
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/post/:slug" element={<PostDetail />} />
+          <Route path="/about" element={<About />} />
+
+          {/* Auth routes */}
+          <Route path="/login" element={<Login />} />
+
+          {/* Protected admin routes */}
+          <Route 
+            path="/admin" 
+            element={
+              <PrivateRoute>
+                <Admin />
+              </PrivateRoute>
+            } 
+          />
+
+          {/* 404 route */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </AuthProvider>
   );
 };
 

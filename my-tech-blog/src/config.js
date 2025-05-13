@@ -8,16 +8,16 @@ const config = {
   blog: {
     title: 'NeuroNodes Tech Blog',
     description: 'A modern React tech blog focusing on web development, AI, and programming tips.',
-    author: 'Your Name',
-    logo: '/assets/logo.svg', // Path to your logo
+    author: 'Niwarthana Abayawardhana',
+    logo: '/assets/logo.svg',
     baseUrl: 'https://your-domain.com', // Used for canonical URLs and SEO
   },
   
   // Social media links
   social: {
     twitter: 'https://twitter.com/yourusername',
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
+    github: 'https://github.com/H-N-S-Abayawardhana',
+    linkedin: 'https://www.linkedin.com/in/niwarthana-abayawardhana-0752a5268/',
   },
   
   // Navigation links
