@@ -10,7 +10,7 @@ const config = {
     description: 'A modern React tech blog focusing on web development, AI, and programming tips.',
     author: 'Niwarthana Abayawardhana',
     logo: '/assets/logo.svg',
-    baseUrl: 'https://your-domain.com', // Used for canonical URLs and SEO
+    baseUrl: 'https://your-domain.com', 
   },
   
   // Social media links
